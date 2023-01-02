@@ -1,5 +1,6 @@
 "use client"
 import Link from "next/link"
+import * as Sentry from "@sentry/nextjs"
 
 export default function Home() {
   return (
@@ -18,6 +19,7 @@ export default function Home() {
         <button
           type="button"
           onClick={() => {
+            Sentry.captureMessage("Hello world")
             throw new Error("Frontend Error")
           }}
         >
