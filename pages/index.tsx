@@ -1,6 +1,7 @@
 "use client"
 import Link from "next/link"
 import * as Sentry from "@sentry/nextjs"
+import LoginButton from "../components/login-btn"
 
 export default function Home() {
   return (
@@ -25,6 +26,9 @@ export default function Home() {
         >
           Throw Error
         </button>
+      </section>
+      <section>
+        <LoginButton />
       </section>
     </main>
   )
